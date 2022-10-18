@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class ReverseTheString_LambdaTest {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String");
+		String str= sc.nextLine();
+		
+		String reverseString="";
+		int i=str.length()-1;
+        int startIndex=0;
+        int endIndex = str.length();
+        while(i>=0) {
+        	if(str.charAt(i)==' ') {
+        		reverseString+=str.substring(i+1,endIndex)+" ";
+        		endIndex=i;
+        	}
+        	i--;
+        }
+        reverseString+=str.substring(startIndex,endIndex);
+		System.out.print(reverseString);
+
+	}
+
+}
